@@ -1,0 +1,11 @@
+{
+  "name": "@w/config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "postcss.config.js",
+    "tailwind.config.js"
+  ]
+}

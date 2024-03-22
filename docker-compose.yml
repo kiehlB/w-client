@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: ./apps/web/Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - app_network
+
+  kratos: # Indent this line
+    image: oryd/kratos:latest # Use a specific version for stability
+    environment:
+      - DSN=memory
+    container_name: kratos
+    restart: always
+    ports:
+      - 4433:4433 # Public Kratos API port
+      - 4434:4434 # Kratos admin port
+    volumes:
+      - ./kratos.yml:/etc/kratos.yml:ro
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    external: true
