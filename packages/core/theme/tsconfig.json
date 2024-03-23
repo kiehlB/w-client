@@ -1,0 +1,6 @@
+{
+  "extends": "@w/typescript-config/base.json",
+
+  "include": ["src/index.ts"],
+  "exclude": ["**/*.js"]
+}
