@@ -1,26 +1,31 @@
 {
   "name": "@w/ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "exports": {
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
-  },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component"
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
-    "@w/eslint-config": "workspace:*",
-    "@w/typescript-config": "workspace:*",
-    "@turbo/gen": "^1.12.4",
-    "@types/node": "^20.11.24",
+    "@next/eslint-plugin-next": "^14.1.1",
     "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "@w/eslint-config": "workspace:*",
+    "@w/typescript-config": "workspace:*",
     "eslint": "^8.57.0",
-    "react": "^18.2.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@w/use-element-state": "workspace:*",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.20",
+    "next": "^14.1.1",
+    "next-themes": "^0.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

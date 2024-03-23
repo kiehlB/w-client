@@ -1,8 +1,9 @@
 import ncu from "npm-check-updates";
 import glob from "glob";
-import {resolve} from "path";
+import { resolve } from "path";
 
-const shouldUpgrade = process.argv.includes("--upgrade") || process.argv.includes("-u");
+const shouldUpgrade =
+  process.argv.includes("--upgrade") || process.argv.includes("-u");
 
 const checkForUpdates = async (path: string) => {
   const filePaths = glob.sync(resolve(path, "**/package.json"), {
@@ -24,7 +25,10 @@ const checkForUpdates = async (path: string) => {
       }
     } catch (error) {
       if (error instanceof Error) {
-        console.error(`Error occurred while checking for updates in ${filePath}:`, error.message);
+        console.error(
+          `Error occurred while checking for updates in ${filePath}:`,
+          error.message
+        );
       } else {
         console.error(`An unexpected error occurred in ${filePath}:`, error);
       }

@@ -83,7 +83,7 @@ module.exports = function main(plop) {
 
         if (!answers) return actions;
 
-        const { description, outDir } = answers;
+        const {description, outDir} = answers;
         const generatorName = answers[`${gen}Name`] ?? "";
 
         const data = {
