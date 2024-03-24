@@ -26,7 +26,8 @@
     "clean:lock": "rimraf ./pnpm-lock.yaml",
     "create:cmp": "plop component",
     "create:pkg": "plop package",
-    "create:hook": "plop hook"
+    "create:hook": "plop hook",
+    "create:lib": "plop lib"
   },
   "devDependencies": {
     "@w/eslint-config": "workspace:*",

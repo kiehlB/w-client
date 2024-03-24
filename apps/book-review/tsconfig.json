@@ -1,6 +1,12 @@
 {
   "extends": "@w/typescript-config/nextjs.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["./*"]
+    },
+
     "plugins": [
       {
         "name": "next"
