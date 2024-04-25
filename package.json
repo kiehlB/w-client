@@ -24,14 +24,13 @@
     "clean": "pnpm turbo:clean && pnpm clean:jest && pnpm clean:node-modules && pnpm clean:lock && pnpm install --hoist",
     "clean:node-modules": "rimraf ./apps/**/node_modules && rimraf ./packages/**/**/node_modules && rimraf ./node_modules",
     "clean:lock": "rimraf ./pnpm-lock.yaml",
-    "create:cmp": "plop component",
+    "create:ui": "plop ui",
     "create:pkg": "plop package",
     "create:hook": "plop hook",
     "create:lib": "plop lib"
   },
   "devDependencies": {
     "@w/eslint-config": "workspace:*",
-    "@w/ui": "workspace:*",
     "@w/typescript-config": "workspace:*",
     "@types/glob": "^8.1.0",
     "@commitlint/config-conventional": "^17.2.0",
