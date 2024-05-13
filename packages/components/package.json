@@ -1,5 +1,5 @@
 {
-  "name": "@w/ui",
+  "name": "@w/components",
   "version": "2.0.0",
   "license": "MIT",
   "main": "src/index.ts",

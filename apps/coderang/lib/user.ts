@@ -1,4 +1,3 @@
-import nodeFetch from 'node-fetch';
 import { apiUrl, graphqlUrl } from './config';
 import {
   PROFILE_V2_EXTRA_QUERY,
@@ -192,17 +191,15 @@ const getProfileV2ExtraRequest = async (
 };
 
 export async function getProfileSSR(id: string): Promise<PublicProfile> {
-  return await getProfileRequest(nodeFetch, id);
+  return await getProfileRequest(fetch, id);
 }
 
 export async function getProfile(id: string): Promise<PublicProfile> {
   return await getProfileRequest(fetch, id);
 }
 
-export async function getProfileV2ExtraSSR(
-  id: string,
-): Promise<Omit<ProfileV2, 'user'>> {
-  return await getProfileV2ExtraRequest(nodeFetch, id);
+export async function getProfileV2ExtraSSR(id: string): Promise<Omit<ProfileV2, 'user'>> {
+  return await getProfileV2ExtraRequest(fetch, id);
 }
 
 export enum ReferralOriginKey {

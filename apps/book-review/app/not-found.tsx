@@ -1,6 +1,6 @@
 "use client";
 
-import {ArrowLink} from "@w/ui";
+import {ArrowLink} from "@w/components";
 
 export type Error404Props = {};
 

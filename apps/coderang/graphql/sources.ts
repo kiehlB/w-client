@@ -10,6 +10,22 @@ export interface Source {
   description?: string;
 }
 
+export interface SourceMember {
+  role: SourceMemberRole;
+  user: any;
+  source: Squad;
+  referralToken: string;
+  permissions?: any[];
+  flags?: any;
+}
+
+export enum SourceMemberRole {
+  Member = 'member',
+  Moderator = 'moderator',
+  Admin = 'admin',
+  Blocked = 'blocked',
+}
+
 export interface Squad extends Source {
   active: boolean;
   permalink: string;

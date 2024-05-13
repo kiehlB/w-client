@@ -1,6 +1,6 @@
 "use client";
 
-import {BackLink} from "@w/ui";
+import {BackLink} from "@w/components";
 
 export default function GlobalError({}: {error: Error & {digest?: string}; reset: () => void}) {
   return (

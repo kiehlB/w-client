@@ -9,7 +9,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
-    "@w/ui": "workspace:*",
+    "@w/components": "workspace:*",
     "@w/apollo-client": "workspace:*",
     "@apollo/client": "^3.8.7",
     "@apollo/experimental-nextjs-app-support": "^0.5.1",
