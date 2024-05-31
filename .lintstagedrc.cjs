@@ -6,9 +6,7 @@ const removeIgnoredFiles = async (files) => {
   const cwd = process.cwd();
   const eslint = new ESLint();
   const relativePaths = files.map((file) => relative(cwd, file));
-  const isIgnored = await Promise.all(
-    relativePaths.map((file) => eslint.isPathIgnored(file))
-  );
+  const isIgnored = await Promise.all(relativePaths.map((file) => eslint.isPathIgnored(file)));
   const filteredFiles = files.filter((_, i) => !isIgnored[i]);
 
   return filteredFiles.join(" ");
@@ -23,8 +21,6 @@ module.exports = {
   "**/*.css": async (files) => {
     const filesToLint = await removeIgnoredFiles(files);
 
-    return [
-      `prettier --config .prettierrc.json --ignore-path --write ${filesToLint}`,
-    ];
+    return [`prettier --config .prettierrc.json --ignore-path --write ${filesToLint}`];
   },
 };
