@@ -6,20 +6,15 @@ const camelCase = (str) => {
   return str.replace(/[-_](\w)/g, (_, c) => c.toUpperCase());
 };
 
-const workspaces = ["ui", "components", "lib", "core", "hooks", "utilities"];
-const generators = ["ui", "component", "lib", "package", "hook"];
+const workspaces = ["components", "core", "hooks", "utilities"];
+const generators = ["component", "package", "hook"];
 
 const defaultOutDirs = {
-  ui: "ui",
   component: "components",
-  lib: "lib",
   hook: "hooks",
   package: "utilities",
 };
 
-/**
- * @param {import("plop").NodePlopAPI} plop
- */
 module.exports = function main(plop) {
   plop.setHelper("capitalize", (text) => {
     return capitalize(camelCase(text));
