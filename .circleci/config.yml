@@ -1,28 +1,20 @@
 version: 2.1
 orbs:
   node: circleci/node@5.0.2
-
 workflows:
   test:
     jobs:
       - test
-
 jobs:
   test:
     docker:
       - image: cimg/node:lts
     steps:
       - checkout
-      - node/install-packages
+      - node/install-packages:
       - run:
-          name: Install pnpm globally
-          command: npm i -g pnpm
+        command: npm i -g pnpm
       - run:
-          name: Install dependencies
-          command: npm install
+        command: pnpm build
       - run:
-          name: Build the project
-          command: pnpm build
-      - run:
-          name: Run tests
-          command: pnpm test
+        command: pnpm test
