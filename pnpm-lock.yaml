@@ -94,6 +94,8 @@ importers:
         specifier: ^5
         version: 5.3.3
 
+  packages/config: {}
+
   packages/eslint-config:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
@@ -117,6 +119,8 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
+
+  packages/eslint-rules: {}
 
   packages/typescript-config: {}
 
